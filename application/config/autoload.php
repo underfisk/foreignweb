@@ -81,5 +81,6 @@ $autoload['language'] = array(
 $autoload['model'] = array(
     'Notices_model' => 'notices',
     'Users_model'   => 'users',
-    'Logs_model'    =>  'logs'
+    'Logs_model'    =>  'logs',
+    'Characters_model'  =>  'characters'
 );

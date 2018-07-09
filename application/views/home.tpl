@@ -92,7 +92,11 @@
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 							<div class="card card-hover">
 								<div class="card-img">
-									<img src="{$app_url}img/blog/md/1.jpg" alt="">
+									{if $x.nimg_url}
+										<img src="{$x.nimg_url}" alt="">
+									{else}
+										<img src="{$app_url}img/blog/md/1.jpg" alt="">
+									{/if}
 									<div class="category">
 										{if $x.ncategory == "1"}
 											<span class="label label-warning">News</span>
@@ -104,7 +108,6 @@
 											<span class="label label-danger">Events</span>
 										{/if}
 									</div>
-									<div class="meta"><a href="games-single.html"><i class="fa fa-heart-o"></i> <span>15</span></a></div>
 								</div>
 								<div class="caption">
 									<h3 class="card-title"><a href="{$app_url}blog/view/id_here">{$x.ntitle}</a></h3>

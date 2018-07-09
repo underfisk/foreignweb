@@ -60,11 +60,11 @@ class Users_model extends CI_Model
 
 	function byId($id,$exists_only = false)
 	{
-		$this->db->where('id',$id);
-		$this->db->get('users');
-		if ($this->db->num_rows() > 0){
+		$q = $this->db->where('id',$id);
+		$q = $this->db->get('users');
+		if ($q->num_rows() > 0){
 			if (!$exists_only){
-				return $this->db->result_array();
+				return $q->result_array();
 			}
 			else
 				return true;
@@ -92,6 +92,7 @@ class Users_model extends CI_Model
 		$q = $this->db->get('users',1);
 		return $q->num_rows() > 0 ? $q->result_array() : false;
 	}
+
 }
 
 ?>

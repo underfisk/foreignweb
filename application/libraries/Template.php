@@ -71,7 +71,7 @@ class Template
 		);
 
 		// Load the main template
-		return $output = $this->CI->smartyengine->view($this->view_path.'static/template.tpl', $theme_data, true);
+		return $this->CI->smartyengine->view($this->view_path.'static/template.tpl', $theme_data, true);
 	}
 
 	/**

@@ -17,6 +17,29 @@ class Main extends CI_Controller
 		die($this->template->view($content));
 	}
 
+	/**
+	 * Route function to show download page
+	 */
+	public function download()
+	{
+		$this->template->setTitle("Download");
+		die($this->template->view($this->template->loadPage('download.tpl')));
+	}
+
+	/**
+	 * Route function defined to show characters
+	 */
+	public function characters()
+	{
+		if (!isLogged())
+			redirect(base_url(),'refresh');
+
+		$this->template->setTitle("Characters");
+		$data = array(
+			'nchars' => $this->characters->byUserID($this->users->getID($this->session->userdata('usr')))
+		);
+		die($this->template->view($this->template->loadPage('characters.tpl', $data)));
+	}
 
 	/**
 	 * Route function for logout to destroy the current user session
@@ -234,8 +257,9 @@ class Main extends CI_Controller
 		$this->template->setTitle("User Panel");
 
 		$data = array(
-		    'acc_data'  =>  $this->users->byUsr($this->session->userdata('usr'))
-        );
+		    'acc_data'  	=>  $this->users->byUsr($this->session->userdata('usr')),
+			'chars_count'	=>	$this->characters->CountByUserId($this->users->byUsr($this->session->userdata('usr'))[0]['id'])
+		);
 
 		$content  = $this->template->loadPage("ucp.tpl",$data);
 		die($this->template->view($content));

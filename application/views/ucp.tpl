@@ -1,6 +1,6 @@
 <!-- wrapper -->
 	<div id="wrapper">
-    <section class="hero parallax" style="background-image: url({$app_url}img/cover/cover-parallax.jpg); background-position: 50% -266.667px;">
+    <section class="hero parallax" style="background-image: url({$app_url}img/cover/cover_2.jpg); background-position: 50% -266.667px;">
 			<div class="hero-bg"></div>
 			<div class="container">
 				<div class="page-header">
@@ -14,20 +14,15 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-                    <div class="alert alert-success alert-lg">
-					<h4 class="alert-title">Well done!</h4>
-					<p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
-				</div>
+
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 margin-bottom-sm-30">
 						<div class="widget">
 							<div class="panel panel-default">
 								<div class="panel-heading">Menu</div>
 								<div class="panel-body no-padding">
 									<ul class="panel-list-bordered">
-										<li><a href="{$base_url}change_details"><i class="fa fa-edit"></i> Change Details</a></li>
+										<li><a><i class="fa fa-edit"></i> Change Details</a></li>
 										<li><a href="{$base_url}characters"><i class="fa fa-user-secret"></i> My Characters</a></li>
-										<li><a href="{$base_url}activity"><i class="fa fa-file"></i> Account Log</a></li>
-										<li><a href="{$base_url}support_messages"><i class="fa fa-envelope"></i> Suppport Messages</a></li>
 										<li><a href="{$base_url}main/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
 									</ul>
 								</div>
@@ -45,7 +40,7 @@
 										<li><i class="fa fa-paper-plane-o"></i> Status: {if $extra['acc_data'][0]['validated'] == 1}<b>Activated</b>{else}<b>Not verified</b>{/if}</li>
 										<li><i class="fa fa-calendar"></i> Join date: {$extra['acc_data'][0]['rdate']}</li>
 										<li><i class="fa fa-chain-broken"></i> Achivements Points : Soon</li>
-										<li><i class="fa fa-user-secret"></i> Nº Characters: Soon</li>
+										<li><i class="fa fa-user-secret"></i> Nº Characters: {$extra['chars_count']}</li>
 									</ul>
 								</div>
 							</div>

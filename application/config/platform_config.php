@@ -3,11 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $config['emailserver'] = array(
     'protocol' => 'smtp',
-    'smtp_host' => 'mail.publines.pt',
+    'smtp_host' => 'mail@smtpserver.com',
     'smtp_port' => 587,
-    'smtp_user' => 'rpgtest@publines.pt',
-    'smtp_pass' => 'b#PBEoibxp}w',
+    'smtp_user' => 'root',
+    'smtp_pass' => '',
     'mailtype'  => 'html', 
     'charset'   => 'utf-8',
-    'emailreceiver' =>  'monstawoodwow@gmail.com'
+    'emailreceiver' =>  'asdasd@gmail.com'
 );

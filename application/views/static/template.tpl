@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    {$header}
-   <body class="fixed-header" ng-app="tmpApp">
+   <body class="fixed-header" >
      <!-- Header navbar here -->
     <header>
 		<div class="container">
@@ -15,15 +15,6 @@
 						<li>
 							<a href="{$base_url}download" class="dropdown-toggle">Download</a>
 						</li>
-						<li>
-							<a href="gallery">Gallery</a>
-						</li>
-						<li>
-							<a href="howto">How to Connect?</a>
-						</li>
-						<li>
-							<a href="contact">Support</a>
-						</li>
 					</ul>
 				</div>
 			</nav>
@@ -34,7 +25,6 @@
 					<ul class="dropdown-menu">
 						<li><a href="{$base_url}account"><i class="fa fa-user"></i> Profile</a></li>
 						<li><a href="{$base_url}characters"><i class="fa fa-gamepad"></i> Characters</a></li>
-						<li><a href="{$base_url}settings"><i class="fa fa-gear"></i> Settings</a></li>
 						<li class="divider"></li>
 						<li><a href="{$base_url}main/logout"><i class="fa fa-power-off"></i> Sign Out</a></li>
 					</ul>
